@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Online Learning Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background-color: #f8f9fa;
+            padding: 100px 0;
+        }
+        .category-box {
+            padding: 30px 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        .category-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .card {
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .testimonial-carousel {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+        }
+        .faq-section {
+            padding: 50px 0;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 50px 0;
+        }
+        .section-anchor {
+            position: relative;
+            top: -80px; /* Adjust based on your navbar height */
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-graduation-cap me-2"></i>LearnHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <section class="hero-section mt-5">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Start Learning Today!</h1>
+            <p class="lead mb-4">Unlock your potential with our expert-led courses. Learn at your own pace, anytime, anywhere.</p>
+            <a href="#courses" class="btn btn-primary btn-lg">Browse Courses</a>
+        </div>
+    </section>
+
+    <!-- 3. Course Categories -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Popular Categories</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="category-box text-center bg-light">
+                        <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                        <h3>Programming</h3>
+                        <p>Learn the latest programming languages and frameworks from industry experts.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="category-box text-center bg-light">
+                        <i class="fas fa-chart-bar fa-3x text-primary mb-3"></i>
+                        <h3>Data Science</h3>
+                        <p>Master data analysis, visualization, and machine learning techniques.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="category-box text-center bg-light">
+                        <i class="fas fa-paint-brush fa-3x text-primary mb-3"></i>
+                        <h3>Design</h3>
+                        <p>Develop your creative skills in UI/UX, graphic design, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Featured Courses -->
+    <section id="courses" class="py-5 bg-light">
+        <span class="section-anchor" id="courses-anchor"></span>
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Courses</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2ViJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Web Development Course">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Complete Web Development Bootcamp</h5>
+                            <p class="card-text">By Sarah Johnson</p>
+                            <p class="card-text flex-grow-1">Learn front-end and back-end development with HTML, CSS, JavaScript, React, Node.js and more.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <a href="#" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2dyYW1taW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Python Course">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Python for Data Science</h5>
+                            <p class="card-text">By Michael Chen</p>
+                            <p class="card-text flex-grow-1">Master data analysis, visualization, and machine learning with Python's powerful libraries.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                                <a href="#" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZGVzaWduJTIwdWklMkZ1eHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="UI/UX Design Course">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">UI/UX Design Masterclass</h5>
+                            <p class="card-text">By Emily Rodriguez</p>
+                            <p class="card-text flex-grow-1">Create beautiful and functional user interfaces with modern design principles and tools.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                                <a href="#" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Student Feedbacks -->
+    <section id="testimonials" class="testimonial-carousel">
+        <span class="section-anchor" id="testimonials-anchor"></span>
+        <div class="container">
+            <h2 class="text-center mb-5">What Our Students Say</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 text-center">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBvcnRyYWl0fGVufDB8fDB8fHww&auto=format&fit=crop&w=100&q=80" class="rounded-circle mb-3" alt="Student" width="100" height="100">
+                                <h4>Alex Morgan</h4>
+                                <p class="fst-italic">"The courses are well-structured and the instructors are knowledgeable. I've significantly improved my coding skills since joining LearnHub."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 text-center">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBvcnRyYWl0fGVufDB8fDB8fHww&auto=format&fit=crop&w=100&q=80" class="rounded-circle mb-3" alt="Student" width="100" height="100">
+                                <h4>Jessica Lee</h4>
+                                <p class="fst-italic">"The platform is user-friendly and the community is supportive. I've landed my dream job thanks to the skills I gained here."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 text-center">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBvcnRyYWl0fGVufDB8fDB8fHww&auto=format&fit=crop&w=100&q=80" class="rounded-circle mb-3" alt="Student" width="100" height="100">
+                                <h4>David Wilson</h4>
+                                <p class="fst-italic">"The flexibility to learn at my own pace while getting instructor support when needed has been perfect for my busy schedule."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FAQ Section -->
+    <section id="faq" class="faq-section">
+        <span class="section-anchor" id="faq-anchor"></span>
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            How do I enroll in a course?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Simply browse our course catalog, select the course you're interested in, and click the "Enroll Now" button. You'll be guided through the registration and payment process.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Can I access courses on mobile devices?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes! Our platform is fully responsive and works on all devices including smartphones, tablets, and computers.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            Do you offer certificates upon completion?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, we offer certificates of completion for all our courses. These can be downloaded as PDFs or shared directly to your LinkedIn profile.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            What if I need help during my course?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We have a dedicated support team and active community forums where you can ask questions. Many courses also offer direct messaging with instructors.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>About LearnHub</h5>
+                    <p>LearnHub is an online learning platform dedicated to providing high-quality education to students worldwide. We believe in making education accessible to everyone.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#courses" class="text-white text-decoration-none">Courses</a></li>
+                        <li><a href="#testimonials" class="text-white text-decoration-none">Testimonials</a></li>
+                        <li><a href="#faq" class="text-white text-decoration-none">FAQ</a></li>
+                        <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> info@learnhub.com</li>
+                        <li><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Education St, Learning City</li>
+                    </ul>
+                    <div class="mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const offsetTop = targetElement.offsetTop - 80; // Adjust for fixed navbar
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
